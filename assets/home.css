@@ -1,0 +1,363 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@500&display=swap');
+
+:root{
+    --header-height: 3.5rem;
+
+    --first-color: hsl(203, 71%, 60%);
+    --second-color: hsl(277,56%,68%);
+    --text-color: hsl(203,8%,98%);
+    --body-color: hsl(258,20%,18%);
+    --header-font: 'Oxanium', cursive;
+    --biggest-font-size: 2.25rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+    --font-semi-bold: 600;
+    --z-fixed: 100;
+    --regular-text: 'Montserrat';
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--regular-text);
+    font-size: var(--normal-font-size);
+    background: url("https://i.pinimg.com/originals/e5/e0/01/e5e001ecb26b530d51d4fb99bc1ff93b.jpg") no-repeat;
+    color: white;
+    background-position: center;
+    background-size: cover;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.hamburger{
+    width: 30px;
+}
+
+.close{
+    width: 40px;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    font-family: var(--header-font);
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+
+.logo{
+    width: 100px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    font-size: 1.15rem;
+}
+
+#checkbox{
+    display: none;
+}
+
+.icons{
+    cursor: pointer;
+    display: none;
+    right: 5%;
+}
+
+.main{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 10%;
+    text-align: center;
+}
+.slider-text{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: start;
+    align-items: center;
+}
+
+.main-text:first-child{
+    font-weight: 200;
+    font-size: 20px;
+    text-transform:uppercase;
+}
+
+.clubname{
+    font-weight: 700;
+    font-size: 85px;
+    letter-spacing: 1px;
+    font-family: var(--header-font);
+    margin-top: 2rem;
+}
+.more-button {
+    margin-top: 2rem;
+    background-color: transparent;
+    border: none;
+    /* border: 2px solid white;
+    border-radius: 50px; */
+    width: 80px;
+    cursor: pointer;
+}
+
+.more-button img {
+    width: 70%;
+}
+.btn-container{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.btn-container label{
+    padding-top: 25px;
+    float: left;
+}
+.main-description{
+    font-weight: 100;
+    text-transform:lowercase;
+    margin-top: 1rem;
+}
+
+.images-carousel{
+    width: 600px;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 600%;
+    height: 600px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 600px;
+    height: 600px;
+}
+
+.navigation-manual{
+    position: absolute;
+    width: 600px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: var(--first-color);
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+
+@media screen and (min-width: 1024px) {
+    :root{
+        --biggest-font-size: 4rem;
+        --h2-font-size: 1.5rem;
+        --normal-font-size: 1rem;
+        --smaller-font-size: .813rem;
+    }
+    .logo{
+        width: 100px;
+    }
+
+    .slider-text {
+        flex-direction: row; 
+    }
+
+    .main-text {
+        width: 50%; 
+    }
+}
+@media screen and (max-width: 992px) {
+    .header{
+        padding: 1.3rem 5%;
+    }
+    .slider-text{
+        display: flex;
+        flex-direction: column;
+    }
+    .images-carousel{
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .slides{
+        width: 500%;
+        height: 300px;
+        display: flex;
+    }
+    
+    .slide img{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .navigation-manual{
+        width: 300px;
+    }
+    
+    .manual-btn{
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 5px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+    .manual-btn:not(:last-child){
+        margin-right: 25px;
+    }
+    
+    .main{
+        text-align: center;
+    }
+    .btn-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .slider-text{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .main-text:first-child{
+        font-weight: 200;
+        font-size: 14px;
+    }
+    
+    .main-description{
+        margin-top: 1rem;
+    }
+    
+    .clubname{
+        font-weight: 600;
+        font-size: 45px;
+        margin-top: 1rem;
+    }
+
+
+}
+@media screen and (max-width: 768px) {
+    .icons{
+        display: inline-flex;
+    }
+
+    #checkbox:checked~.icons #hamburger{
+        display: none;
+    }
+
+    .icons .close{
+        display: none;
+    }
+
+    #checkbox:checked~.icons #close{
+        display: block;
+    }
+    #checkbox:checked~.navbar{
+        height: 16rem;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0 ;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: .3s ease;
+
+    }
+    #checkbox:checked~.navbar a{
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+}

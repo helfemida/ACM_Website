@@ -4,7 +4,7 @@
 :root{
     --header-height: 3.5rem;
 
-    --first-color: hsl(203, 71%, 60%);
+    --first-color: #00f7ff;
     --second-color: hsl(277,56%,68%);
     --text-color: hsl(203,8%,98%);
     --body-color: hsl(258,20%,18%);
@@ -102,7 +102,7 @@ ul{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10rem 10%;
+    padding: 13rem 10%;
     text-align: center;
 }
 .slider-text{
@@ -129,26 +129,26 @@ ul{
 .more-button {
     margin-top: 2rem;
     background-color: transparent;
-    border: none;
-    /* border: 2px solid white;
-    border-radius: 50px; */
-    width: 80px;
+    border: 2px solid white;
+    border-radius: 50px;
+    width: 120px;
+    height: 40px;
+    color: white;
+    font-family: var(--regular-text);
     cursor: pointer;
 }
-
-.more-button img {
-    width: 70%;
+.more-button:hover{
+    background-color: var(--first-color);
+    transition: 1s ease;
 }
+
 .btn-container{
     width: 40%;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.btn-container label{
-    padding-top: 25px;
-    float: left;
-}
+
 .main-description{
     font-weight: 100;
     text-transform:lowercase;
@@ -218,7 +218,72 @@ ul{
     margin-left: -40%;
 }
 
-
+.details-section{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 1rem 10%;
+    display: flex;
+    flex-direction: column;
+}
+.details-header{
+    font-size: 70px;
+    font-family: var(--header-font);
+    font-weight: 700;
+    width: 30%;
+    margin-bottom: 1.7rem;
+}
+.numbers-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.details-box{
+    display: flex;
+    flex-direction: column;
+    width: 45rem;
+    text-wrap: wrap;
+    height: 400px;
+    align-content: center;
+    border: 2px solid white;
+    padding: 1.5rem;
+    font-size: 16px;  
+}
+.number{
+    color: var(--first-color);
+    font-weight: 700;
+    font-size: 80px;
+    margin-bottom: 1rem;
+}
+.detail{
+    font-weight: 600;
+    font-size: 45px;
+    margin-bottom: 1rem;
+}
+.details-box:not(:last-child){
+    margin-right: 10%;
+}
+.map-section{
+    padding: 1rem 10%;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.map{
+    height: 500px;
+    width: 500px;
+    float: right;
+}
+.map-header{
+    display: flex;
+    width: 20%;
+    font-weight: 600;
+    font-family: var(--header-font);
+    font-size: 60px;
+}
 @media screen and (min-width: 1024px) {
     :root{
         --biggest-font-size: 4rem;
@@ -283,12 +348,11 @@ ul{
     .main{
         text-align: center;
     }
-    .btn-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+
+    .more-button{
+        margin-bottom: 2rem;
     }
+
     .slider-text{
         display: flex;
         justify-content: center;
@@ -312,8 +376,16 @@ ul{
         font-size: 45px;
         margin-top: 1rem;
     }
-
-
+    .details-section{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+    .numbers-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 @media screen and (max-width: 768px) {
     .icons{

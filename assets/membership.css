@@ -4,8 +4,34 @@
     --header-font: 'Oxanium', cursive;
     --regular-text: 'Montserrat';
 }
+.join-container{
+    margin-top: 10rem;
+    padding: 0 10%;
+}
+h1 span{
+    position: relative;
+    color: var(--first-color);
+}
+h1 span::before{
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 2px;
+    right: -8px;
+    top: 50%;
+    background: var(--first-color);
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    50% {
+        opacity: 0;
+    }
+}
+h1 span.stop-blining::before{
+    animation: none;
+}
 .steps-container{
-
     display: flex;
     justify-content: center;
     align-items: center;

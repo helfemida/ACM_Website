@@ -12,7 +12,9 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/home.css">
-    <title>SHECODES - Homepage</title>
+    <link rel="stylesheet" href="assets/membership.css">
+
+    <title>SHECODES - Membership Page</title>
 </head>
 <body>
     <header class="header" id="header">
@@ -24,7 +26,7 @@
             <img src="assets/images/img/error.png" alt="" class="close" id="close">
         </label>
         <nav class="navbar" id="navbar">
-            <a href="home.html" style="--i:0;" class="home">home</a>
+            <a href="home.html" style="--i:0;">home</a>
             <a href="events.html" style="--i:1;">events</a>
             <a href="membership.html" style="--i:2;">membership</a>
             <a href="useful.html" style="--i:3;">useful</a>
@@ -32,86 +34,53 @@
         </nav>
     </header>
 
-
-    <main class="main" id="main">
-        <div class="slider-text">
-            <div class="main-text" id="main-text">
-                <p class>
-                    Empower with
-                </p>
-                <h1 class="clubname">
-                    SHECODES
-                </h1>
-                <p class="main-description">
-                    place where you can find like-minded, ambitious women community in this huge world of IT, who will help you to learn, grow and develop together. make an attemp to become successfull right now!
-                </p>
-                <button class="more-button">
-                    see more
-                </button>
-            </div>
-            
-            <div class="images-carousel">
-                <div class="slides">
-                    <input type="radio" name="radio-btn" id="radio1">
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-    
-                    <div class="slide first">
-                        <img src="assets/images/img/1.jpg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/images/img/2.jpg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/images/img/3.jpg" alt="">
-                    </div>
-                </div>
-                <div class="navigation-manual">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                </div>
-            </div>
+    <section class="join-container">
+        <div class="hello-text">
+            <h3>Hello friend! <br> Would you like to jois us?</h3>
         </div>
-        
+        <div class="steps-container">
+            <ul class="steps-list">
+                <li class="steps-item">
+                    <span class="count" onclick="changeStep(this)">1</span>
+                    <span class="progress-level">Choose the suitable level from the listed below</span>
+                </li>
+                <li class="steps-item ">
+                    <span class="count" onclick="changeStep(this)">2</span>
+                    <span class="progress-level">Press the button "Select Level"</span>
+                </li>
+                <li class="steps-item current-item">
+                    <span class="count" onclick="changeStep(this)">3</span>
+                    <span class="progress-level">Get invitation to you mail</span>
+                </li>
+                <li class="steps-item">
+                    <span class="count" onclick="changeStep(this)">4</span>
+                    <span class="progress-level">Pass the contest based on your level</span>
+                </li>
+                <li class="steps-item">
+                    <span class="count">5</span>
+                    <span class="progress-level">Pass the interview</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <main class="levels">
+        <div class="level">
+            <div class="number">1</div>
+            <div class="level-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sit deserunt inventore! Dicta et ipsam inventore itaque quas numquam, sit possimus dolor accusantium reprehenderit odit, delectus molestiae adipisci commodi eveniet!</div>
+        </div>
+        <div class="level">
+            <div class="number">2</div>
+            <div class="level-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sit deserunt inventore! Dicta et ipsam inventore itaque quas numquam, sit possimus dolor accusantium reprehenderit odit, delectus molestiae adipisci commodi eveniet!</div>
+        </div>
+        <div class="level">
+            <div class="number">3</div>
+            <div class="level-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sit deserunt inventore! Dicta et ipsam inventore itaque quas numquam, sit possimus dolor accusantium reprehenderit odit, delectus molestiae adipisci commodi eveniet!</div>
+        </div>
+        <div class="more-button">Select level</div>
     </main>
 
-    <section class="details-section">
-        <span class="details-header">SHECODES</span>
-        <br>
-        <span class="details-header">at a Glance</span>
 
-        <div class="numbers-container">
-            <span class="details-box">
-                <span class="number">30</span>
-                <span class="detail">mentors</span>
-                <span class="number-description">who teach, assit and help you anytime</span>
-            </span>
-            <span class="details-box">
-                <span class="number">50+</span>
-                <span class="detail">events</span>
-                <span class="number-description">among women supposed to showcase the knowledges, improve problem-solving and soft skills</span>
-            </span>
-            <span class="details-box">
-                <span class="number">43</span>
-                <span class="detail">members</span>
-                <span class="number-description">who successfully passed elections and discovering IT areas together</span>
-            </span>
-        </div>
-    </section>
-
-    <section class="map-section" id="map-section">
-        <div class="map-wrapper">
-            <div class="map-text">
-                <span class="map-header">Our Location</span>
-                <p class="number-description">Kaskelen, Abylaikhan st, 1/1</p>
-            </div>
-
-            
-            <div class="map" id="map"></div>
-        </div>
-    </section>
-
+    
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
@@ -158,11 +127,8 @@
         </div>
     </footer>
 
-    <!-- FOOTER ENDS -->
- 
-    <script src="home.js"></script>
-    
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0x17U7Gv78ZdOGEb39Td0REwtYN2CZQQ&callback=initMap" async defer></script>
+    <!-- FOOTER ENDS -->    
+    <script src="membership.js"></script>
    
 </body>
 </html>

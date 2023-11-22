@@ -1,0 +1,45 @@
+:root{
+    --first-color: #00f7ff;
+    --text-color: hsl(203,8%,98%);
+    --header-font: 'Oxanium', cursive;
+    --regular-text: 'Montserrat';
+}
+.calendar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section{
+    width: 80%;
+    margin: 10rem 10%;
+    text-align: start;
+}
+.title{
+    text-align: center;
+    font-size: 56px;
+    color: white;
+    font-family: var(--header-font);
+    text-align: start;
+}
+
+
+.more-button{
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+    width: 120px;
+    height: 40px;
+    color: white;
+    font-family: var(--regular-text);
+    cursor: pointer;
+}
+.more-button:hover{
+    background-color: var(--first-color);
+    transition: 1s ease;
+}
+.countdown-container{
+    width: 100vw;
+    height: 100vh;
+}

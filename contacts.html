@@ -15,9 +15,11 @@
     <link rel="stylesheet" href="assets/contacts.css">
 
     <title>SHECODES - Contacts Page</title>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
-    <header class="header" id="header">
+    <header class="header" id="header" >
         <img src="assets/images/img/shecodes_light_logo.svg" alt="" class="logo" id="logo">
 
         <input type="checkbox" name="" id="checkbox">
@@ -26,13 +28,25 @@
             <img src="assets/images/img/error.png" alt="" class="close" id="close">
         </label>
         <nav class="navbar" id="navbar">
-            <a href="home.html" style="--i:0;">home</a>
-            <a href="events.html" style="--i:1;">events</a>
-            <a href="membership.html" style="--i:2;">membership</a>
-            <a href="useful.html" style="--i:3;">useful</a>
-            <a href="contacts.html" style="--i:4;">contacts</a>
+            <nav class="navbar" id="navbar">
+                <a href="home.html" style="--i:0;">home</a>
+                <a href="events.html" style="--i:1;">events</a>
+                <a href="membership.html" style="--i:2;">membership</a>
+                <a href="contacts.html" style="--i:3;">contacts</a>
+            </nav>
         </nav>
     </header>
+
+    <form id="contact-form" >
+        <input type="hidden" name="contact_number">
+        <label>Name</label>
+        <input id="nameInput" type="text" name="user_name">
+        <label id="email">Email</label>
+        <input id="emailInput" type="email" name="user_email">
+        <label>Message</label>
+        <textarea id="textInput" name="message"></textarea>
+        <button id="submitButton">Submit</button>
+    </form>
     
     <!-- FOOTER -->
     <footer class="footer">
@@ -79,8 +93,9 @@
 
         </div>
     </footer>
-
     <!-- FOOTER ENDS -->    
-   
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="contacts.js"></script>
 </body>
 </html>

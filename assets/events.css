@@ -8,22 +8,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-section{
     width: 80%;
-    margin: 10rem 10%;
+    margin: 9rem 10%;
     text-align: start;
 }
 .title{
     text-align: center;
-    font-size: 56px;
+    font-size: 50px;
     color: white;
     font-family: var(--header-font);
     text-align: start;
 }
-
-
 .more-button{
     margin-top: 1rem;
     background-color: transparent;
@@ -39,16 +34,12 @@ section{
     background-color: var(--first-color);
     transition: 1s ease;
 }
-.countdown-container{
-    width: 100vw;
-    height: 100vh;
-}
 .calendar{
     width: 100vw;
     height: 100vh;
 }
 .upcoming-events{
-    margin: 0 10%;
+    margin: -1rem 10%;
     width: 100%;
     height: 100%;
 }
@@ -66,7 +57,7 @@ section{
 }
 .event{
     width: 80%;
-    max-height: 20%;
+    height: 20%;
     margin-bottom: 3%;
     display: flex;
     flex-direction: row;
@@ -98,6 +89,7 @@ section{
     font-size: 130%;
     font-family: var(--header-font);
     margin-bottom: 1%;
+    color: #00f7ff;
 }
 .event-description > p{
     margin-bottom: 1%;
@@ -116,7 +108,13 @@ section{
 .small-description > label{
     margin-right: 5%;
 }
-
-
+.registration-container{
+    margin-top: -13rem;
+    width: 100vw;
+    height: 89vh;
+    background-color: black;
+    padding: 0 10%;
+}
+.
 
 

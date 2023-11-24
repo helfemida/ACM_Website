@@ -57,7 +57,6 @@ h1 span.stop-blining::before{
     margin-left: -30px;
 }
 .steps-item{
-    flex-grow: 1;
     max-width: 70%;
     display: flex;
     flex-direction: column;
@@ -164,4 +163,73 @@ h1 span.stop-blining::before{
 }
 .levels{
     margin: 5rem 0;
+}
+@media screen and (max-width: 768px) {
+    .join-container{
+        margin-top: 13rem;
+        padding: 0 10%;
+    }
+
+    .hello-text{
+        font-size: 20px;
+    }
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .steps-list {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .steps-item {
+        min-width: auto;
+        max-width: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .steps-item + .steps-item::after {
+        display: none;
+    }
+
+    .progress-level {
+        width: 100%;
+        transform: translateX(0);
+    }
+
+    .arrow-container {
+        padding-top: 1rem;
+    }
+
+    .arrow-container i {
+        font-size: 40px;
+    }
+
+    .title h1 {
+        font-size: 40px;
+        margin-top: 10rem;
+    }
+
+    .number {
+        font-size: 20px;
+    }
+
+    .level-description {
+        font-size: 14px;
+    }
+
+    .more-button {
+        width: 120px;
+        height: 40px;
+    }
+
+    .divider {
+        margin-block: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    
 }

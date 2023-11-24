@@ -97,3 +97,30 @@ function initMap(){
         icon: icon
     });
 }
+
+var redirectButton = document.getElementById("telegram-link");
+    redirectButton.addEventListener("click", function() {        
+        var redirectUrl = 'https://t.me/shecodessdu'
+        window.location.href = redirectUrl;
+    }
+);
+
+var redirectButton = document.getElementById("instagram-link");
+    redirectButton.addEventListener("click", function() {        
+        var redirectUrl = 'https://www.instagram.com/shecodes.sdu/'
+        window.location.href = redirectUrl;
+    }
+);
+
+var redirectButton = document.getElementById("email-link");
+    redirectButton.addEventListener("click", function() {        
+        var redirectUrl = 'contacts.html'
+        window.location.href = redirectUrl;
+    }
+);
+var redirectButton = document.getElementById("more-button");
+    redirectButton.addEventListener("click", function() {        
+        var redirectUrl = 'membership.html'
+        window.location.href = redirectUrl;
+    }
+);

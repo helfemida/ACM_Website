@@ -7,19 +7,24 @@ submitBtn.addEventListener('click', (e) => {
     const email = document.getElementById('emailInput').value;
     const text = document.getElementById('textInput').value;
 
-    const body = "Name: " + name + "<br/> Email: " + email + "<br/> Message: " + text;
+    if(name == '' || email == '' || text ==''){
+        alert('Fields cannot be ampty');
+    }
+    else{
+        const body = "Name: " + name + "<br/> Email: " + email + "<br/> Message: " + text;
 
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "yermekalbina@gmail.com",
-        Password : "F9BBEC16ACED2A41BB0C3B52EEDAEEE9551F",
-        To : 'yermekalbina@gmail.com',
-        From : 'yermekalbina@gmail.com',
-        Subject : 'Contact us',
-        Body : body
-    }).then(
-        message => alert(message)
-    ).cathc(
-        error => alert(error)
-    );
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "yermekalbina@gmail.com",
+            Password : "F9BBEC16ACED2A41BB0C3B52EEDAEEE9551F",
+            To : 'yermekalbina@gmail.com',
+            From : 'yermekalbina@gmail.com',
+            Subject : 'Contact us',
+            Body : body
+        }).then(
+            message => alert(message)
+        ).cathc(
+            error => alert(error)
+        );
+    }
 });

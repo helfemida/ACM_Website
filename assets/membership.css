@@ -4,13 +4,18 @@
     --header-font: 'Oxanium', cursive;
     --regular-text: 'Montserrat';
 }
-.join-container{
-    margin-top: 10rem;
+.join-container,.levels{
     padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
 }
 h1 span{
     position: relative;
     color: var(--first-color);
+    margin-bottom: 2rem;
 }
 h1 span::before{
     content: "";
@@ -33,13 +38,15 @@ h1 span.stop-blining::before{
 }
 .steps-container{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    margin: 5rem 10%;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
     text-align: center;
+    width: 55vw;
+
 }
 .steps-list{
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
     color: white;
     list-style-type: none;
     border-radius: 10px;
@@ -47,19 +54,19 @@ h1 span.stop-blining::before{
     position: relative;
     z-index: 10;
     font-family: var(--regular-text);
+    margin-left: -30px;
 }
 .steps-item{
-    padding: 0 20px;
-    flex-basis: 0;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
-    max-width: 100%;
+    max-width: 70%;
     display: flex;
     flex-direction: column;
     text-align: center;
-    min-width: 170px;
+    min-width: 30%;
     position: relative;
+}
+.steps-item:first-child{
+    padding-left: -10px;
 }
 .steps-item + .steps-item::after{
     content: "";
@@ -71,6 +78,10 @@ h1 span.stop-blining::before{
     height: 2px;
     transform: translateX(-50%);
     z-index: -10;
+}
+.steps-item > span{
+    margin-bottom: 1rem;
+    font-size: 20px;
 }
 .count{
     height: 40px;
@@ -100,7 +111,57 @@ h1 span.stop-blining::before{
     border-radius: 50%;
     z-index: -10;
 }
-
-
-
-
+.progress-level{
+    padding-top: 1rem;
+    width: 60%;
+    transform: translateX(55px);
+}
+.hello-text{
+    font-family: var(--header-font);
+    font-size: 35px;
+    padding: 4rem 0; 
+}
+.arrow-container{
+    padding-top: 3rem;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+}
+.arrow-container i{
+    font-size: 70px;
+    color: #00f7ff;
+}
+.title h1{
+    font-size: 60px;
+    font-family: var(--header-font);
+}
+.number span{
+    color: white;
+}
+.number{
+    font-size: 36px;
+    font-weight: 600;
+}
+.level-description{
+    font-size: 16px;
+}
+.level{
+    margin: 1rem 0;
+}
+.more-button{
+    width: 160px;
+    height: 53;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.divider{
+    margin-block: 2.5rem;
+    border: none;
+    border-top: 2px solid rgb(135, 137, 255);
+    margin-bottom: 3rem;
+}
+.levels{
+    margin: 5rem 0;
+}

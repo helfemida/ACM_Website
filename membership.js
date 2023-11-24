@@ -26,5 +26,25 @@ let isDeleting = false;
         setTimeout(typeEffect, 1200)
     }
  }
-
  typeEffect();
+
+var redirectButton = document.getElementById("select-button1");
+    redirectButton.addEventListener("click", function() {        
+        var redirectUrl = 'https://forms.gle/9KPv4rerwszFypE66'
+        window.location.href = redirectUrl;
+    }
+);
+
+var redirectButton = document.getElementById("select-button2");
+    redirectButton.addEventListener("click", function() {        
+        var redirectUrl = 'https://forms.gle/9KPv4rerwszFypE66'
+        window.location.href = redirectUrl;
+    }
+);
+
+var redirectButton = document.getElementById("select-button3");
+    redirectButton.addEventListener("click", function() {        
+        var redirectUrl = 'https://forms.gle/9KPv4rerwszFypE66'
+        window.location.href = redirectUrl;
+    }
+);

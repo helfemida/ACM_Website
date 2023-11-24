@@ -35,7 +35,7 @@
 
     <section class="join-container">
         <div class="hello-text">
-            <h1>Hello friend! Want to <span></span></h1>
+            <h1>Hello friend! <br> Want to <span></span></h1>
         </div>
         <div class="steps-container">
             <ul class="steps-list">
@@ -43,7 +43,7 @@
                     <span class="count" onclick="changeStep(this)">1</span>
                     <span class="progress-level">Choose the suitable level from the listed below</span>
                 </li>
-                <li class="steps-item ">
+                <li class="steps-item">
                     <span class="count" onclick="changeStep(this)">2</span>
                     <span class="progress-level">Press the button "Select Level"</span>
                 </li>
@@ -61,21 +61,31 @@
                 </li>
             </ul>
         </div>
+        <div class="arrow-container">
+            <i class="ri-arrow-down-s-line arrow"></i>
+        </div>
     </section>
     <main class="levels">
-        <div class="level">
-            <div class="number">1</div>
-            <div class="level-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sit deserunt inventore! Dicta et ipsam inventore itaque quas numquam, sit possimus dolor accusantium reprehenderit odit, delectus molestiae adipisci commodi eveniet!</div>
+        <div class="title">
+            <h1>Levels</h1>
+            <hr class="divider">
         </div>
         <div class="level">
-            <div class="number">2</div>
-            <div class="level-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sit deserunt inventore! Dicta et ipsam inventore itaque quas numquam, sit possimus dolor accusantium reprehenderit odit, delectus molestiae adipisci commodi eveniet!</div>
+            <div class="number">1: <span>Basics</span></div>
+            <div class="level-description">Newbie in programming? Join our 1 level, where you will learn basics of Java/Python/C++, get familiar with different stacks and get support, Q/A sessions, code reviews from our mentors!</div>
+            <div class="more-button" id="select-button1">Select level</div>
         </div>
         <div class="level">
-            <div class="number">3</div>
-            <div class="level-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sit deserunt inventore! Dicta et ipsam inventore itaque quas numquam, sit possimus dolor accusantium reprehenderit odit, delectus molestiae adipisci commodi eveniet!</div>
+            <div class="number">2: <span>Algorithms & Div-1</span></div>
+            <div class="level-description">Elevate your coding skills with Level 2! Dive into advanced algorithms and conquer Div-1 challenges. Get ready for collaborative coding sessions and expert guidance to level up your problem-solving prowess.</div>
+            <div class="more-button" id="select-button2">Select level</div>
         </div>
-        <div class="more-button">Select level</div>
+        <div class="level">
+            <div class="number">3: <span>Interviews & DIV-2</span></div>
+            <div class="level-description">Level up your interview game with Level 3! Master technical interviews, refine your problem-solving skills, and excel in Div-2 challenges. Join us for targeted sessions and mock interviews to confidently navigate the tech interview landscape. Are you ready to shine? Join Level 3 and embrace the challenge!</div>
+            <div class="more-button" id="select-button3">Select level</div>
+        </div>
+        
     </main>
 
 

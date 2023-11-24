@@ -171,7 +171,7 @@
 
 .archive-events {
     width: 100vw;
-    min-height: 100vh; /* Changed height to min-height */
+    min-height: 100vh; 
     padding: 0 10%;
     position: relative;
 }

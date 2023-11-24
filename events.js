@@ -10,11 +10,24 @@ var x = setInterval(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("countdown-container").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
+    document.getElementById("days").innerHTML = days + "d";
+    document.getElementById("hours").innerHTML = hours + "h";
+    document.getElementById("minutes").innerHTML = minutes + "m";
+    document.getElementById("seconds").innerHTML = seconds + "s";
 
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("countdown-container").innerHTML = "EXPIRED";
     }
 }, 1000);
+
+var redirectButton = document.getElementById("register-button");
+
+  redirectButton.addEventListener("click", function() {
+      var isConfirmed = window.confirm("Are you sure you want to redirect?");
+
+      if (isConfirmed) {
+          var redirectUrl = "https://forms.gle/NJGaPsybFdntKw7w9";
+          window.location.href = redirectUrl;
+      }
+  });

@@ -1,10 +1,11 @@
-:root{
+:root {
     --first-color: #00f7ff;
-    --text-color: hsl(203,8%,98%);
+    --text-color: hsl(203, 8%, 98%);
     --header-font: 'Oxanium', cursive;
     --regular-text: 'Montserrat';
 }
-.calendar{
+
+.calendar {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,14 +13,16 @@
     margin: 9rem 10%;
     text-align: start;
 }
-.title{
+
+.title {
     text-align: center;
     font-size: 50px;
     color: white;
     font-family: var(--header-font);
     text-align: start;
 }
-.more-button{
+
+.more-button {
     margin-top: 1rem;
     background-color: transparent;
     border: 2px solid white;
@@ -30,20 +33,18 @@
     font-family: var(--regular-text);
     cursor: pointer;
 }
-.more-button:hover{
+
+.more-button:hover {
     background-color: var(--first-color);
     transition: 1s ease;
 }
-.calendar{
-    width: 100vw;
-    height: 100vh;
-}
-.upcoming-events{
-    margin: -1rem 10%;
+
+.upcoming-events {
     width: 100%;
     height: 100%;
 }
-.events-header{
+
+.events-header {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 40px;
@@ -51,19 +52,15 @@
     text-align: start;
     margin-bottom: 3rem;
 }
-.upcoming-events{
-    display: flex;
-    flex-direction: column;
-}
-.event{
-    width: 80%;
-    height: 20%;
+
+.event {
+    width: 90%;
     margin-bottom: 3%;
     display: flex;
     flex-direction: row;
-    
 }
-.event-date{
+
+.event-date {
     margin-right: 3%;
     display: flex;
     flex-direction: column;
@@ -71,50 +68,157 @@
     align-items: center;
     color: #00f7ff;
     font-size: 110%;
-    border: 1px solid white;
-    padding: 2%;
-}
-.event-description{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    text-wrap: wrap;
-    font-family: var(--regular-text);
-    border: 1px solid white;
+    border: 2px solid white;
     padding: 2%;
 }
 
-.event-description > h5{
+.event-description {
+    display: flex;
+    flex-direction: column;
+    width: 70%; 
+    text-wrap: wrap;
+    font-family: var(--regular-text);
+    border: 2px solid white;
+    padding: 2%;
+}
+
+.event-description > h5 {
     font-weight: 600;
     font-size: 130%;
     font-family: var(--header-font);
     margin-bottom: 1%;
     color: #00f7ff;
 }
-.event-description > p{
-    margin-bottom: 1%;
-    font-size: 100%;
-}
-.small-description{
+
+.small-description {
     width: 40%;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.small-description > i{
+
+.small-description > i {
     font-size: 100%;
     margin-right: 2%;
 }
-.small-description > label{
+
+.small-description > label {
     margin-right: 5%;
 }
-.registration-container{
-    margin-top: -13rem;
-    width: 100vw;
-    height: 89vh;
+
+.registration-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
     background-color: black;
     padding: 0 10%;
+    margin-top: 6rem;
+    color: white;
+    font-family: var(--header-font);
 }
-.
+.countdown-container {
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.month{
+    color: white;
+}
 
+#days, #hours, #minutes, #seconds {
+    display: inline-block;
+    /* border: 2px solid;
+    border-image: linear-gradient(to right, var(--first-color), var(--first-color));
+    border-image-slice: 1; */
+    margin-top: 1rem;
+    margin-right: 10%;
+    font-size: 59px;
+    font-family: var(--header-font);
+    font-weight: 600;
+    color: #00f7ff;
+}
+.main-description{
+    font-size: 1.5rem;
+}
+.main-header{
+    font-size: 40px;
+    font-family: var(--header-font);
+}
+.main-header > span{
+    color: #00f7ff;
+}
+.register-button{
+    margin-top: 5rem;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+    width: 180px;
+    height: 60px;
+    color: white;
+    font-family: var(--regular-text);
+    cursor: pointer;
+    font-size: 22px;
+}
+.register-button:hover{
+    background-color: #00f7ff;
+    transition: 1s;
+}
 
+.archive-events {
+    width: 100vw;
+    min-height: 100vh; /* Changed height to min-height */
+    padding: 0 10%;
+    position: relative;
+}
+.title{
+    font-size: 40px;
+    margin-bottom: 2rem;
+}
+.line{
+    margin-block: 2.5rem;
+    border: none;
+    border-top: 2px solid rgb(135, 137, 255);
+    margin-bottom: 3rem;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.col{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 40%;
+    margin-bottom: 1rem;
+}
+.col .text-part{
+    width: 80%;
+}
+.col a{
+    color: #00f7ff;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: var(--header-font);
+    text-decoration: underline;
+}
+.col p{
+    font-family: var(--regular-text);
+    margin-bottom: 1rem;
+    font-size: 18px;
+    margin: 1.5rem 0;
+}
+.col img{
+    max-height:200px;
+    max-width: 300px;
+}

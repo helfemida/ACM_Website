@@ -20,7 +20,7 @@ body{
     font-family: var(--regular-text);
     font-size: var(--normal-font-size);
     background: rgb(0,0,0);
-    background: linear-gradient(159deg, rgba(0,0,0,1) 16%, rgba(83,85,255,1) 71%, rgba(0,255,173,1) 100%);
+    background: linear-gradient(165deg, rgba(0,0,0,1) 25%, rgb(59, 61, 177) 71%, rgb(0, 166, 255) 100%);
     background-attachment:fixed;
     color: white;
     background-position: center;
@@ -204,6 +204,7 @@ ul{
 
 .manual-btn:hover{
     background-color: var(--first-color);
+    transition: 1s;
 }
 
 #radio1:checked ~ .first{

@@ -132,9 +132,6 @@
 
 #days, #hours, #minutes, #seconds {
     display: inline-block;
-    /* border: 2px solid;
-    border-image: linear-gradient(to right, var(--first-color), var(--first-color));
-    border-image-slice: 1; */
     margin-top: 1rem;
     margin-right: 10%;
     font-size: 59px;
@@ -222,3 +219,102 @@
     max-height:200px;
     max-width: 300px;
 }
+@media screen and (max-width: 768px) {
+    .registration-container {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+    }
+    .events-header{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .events-header > h1{
+        font-size: 30px;
+    }
+ 
+    .main-header, .title{
+         font-size: 25px;
+    }
+ 
+    .main-description {
+         font-size: 16px;
+    }
+ 
+    .countdown-container {
+         display: flex;
+         flex-direction: row;
+         width: 80%;
+         margin: 1rem 0;
+    }
+ 
+    #days, #hours, #minutes, #seconds {
+         display: inline-block;
+         margin-top: 0.5rem;
+         font-size: 25px;
+    }
+
+    .event {
+         flex-direction: column;
+     }
+ 
+    .event-date {
+         margin-right: 0;
+         margin-bottom: 1rem;
+     }
+ 
+    .event-description {
+         width: 100%;
+         margin: 0;
+         font-size: 12px;
+     }
+ 
+    .small-description {
+         width: 100%;
+         margin-bottom: 1rem;
+     }
+     .number{
+        font-size: 40px;
+     }
+ 
+    .small-description > i {
+         margin-right: 2%;
+    }
+ 
+    .register-button {
+         width: 120px;
+         height: 40px;
+         font-size: 18px;
+     }
+ 
+    .archive-events {
+         padding: 0 5%;
+    }
+ 
+    .row {
+         margin-bottom: 1rem;
+     }
+ 
+    .col .text-part {
+         width: 100%;
+     }
+ 
+    .col a {
+         font-size: 20px;
+     }
+ 
+    .col p {
+         font-size: 14px;
+     }
+ 
+    .col img {
+         display: none;
+     }
+ }
+ 
+ 
+ 
